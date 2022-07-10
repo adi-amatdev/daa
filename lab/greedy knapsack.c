@@ -21,7 +21,7 @@ int main (){
         objects[i].x =0;
     }
     for(int i=0; i<n; i++){
-        objects[i].ratio = (objects[i].p)/(objects[i].w); //error  may appear here 
+        objects[i].ratio = (objects[i].p)/(objects[i].w); 
     }
 
     printf("Enter the capacity of the knapsack : \n");
@@ -39,12 +39,12 @@ void calcks(sack objects[],int  n,float c){
         sack *item = find_maxrat(objects,n);
 
         if(item->w <= c-u){
-                item->x =1;                  //x is not updating 
+                item->x =1;                 
                 u += item->w;
         }
         else {
             item->x = ((c-u)/item->w); 
-            printf("%f",item->x)   ;    //x is not updating
+            printf("%f",item->x)   ;    
             break;
         }
     }
